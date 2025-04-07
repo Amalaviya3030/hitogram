@@ -19,3 +19,10 @@ void signal_handler(int signum) {
         alarm(2);
     }
 }
+int main(int argc, char* argv[]) {
+    if (argc != 4) {
+        fprintf(stderr, "Usage: %s <dp2_pid> <dp1_pid> <shm_id>\n", argv[0]);
+        exit(1);
+    }
+
+}
