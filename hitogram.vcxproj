@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="hitogram.cpp" />
+    <ClCompile Include="common.c" />
+    <ClCompile Include="dc.c" />
+    <ClCompile Include="dp1.c" />
+    <ClCompile Include="dp2.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="histogram.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

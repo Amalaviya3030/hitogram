@@ -15,8 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hitogram.cpp">
+    <ClCompile Include="dc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dp1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dp2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="histogram.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
