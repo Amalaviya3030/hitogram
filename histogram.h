@@ -1,3 +1,12 @@
+/*
+FILE          : histogram.h
+PROJECT       : ASSIGNMENT 05
+PROGRAMMER    : ANCHITA KAKRIA, UTTAM ARORA, ARYAN KUMAR
+FIRST VERSION : 7 Apr 2025
+DESCRIPTION   : This is a header file which has declarations for shared memory and semaphores and also
+                function headers.
+*/
+
 #ifndef HISTOGRAM_H
 #define HISTOGRAM_H
 
@@ -12,15 +21,16 @@
 #include <signal.h>
 #include <time.h>
 
-#define BUFFER_SIZE 256
-#define NUM_LETTERS 20  
-#define SEM_KEY 1234
-#define SHM_KEY 5678
+#define BUFFER_SIZE 256 //size of buffer
+#define NUM_LETTERS 20  //no of letter to track
+#define SEM_KEY 1234 //semphore key
+#define SHM_KEY 5678 //shared memory
+
 
 typedef struct {
-    char buffer[BUFFER_SIZE];
-    int read_index;
-    int write_index;
+    char buffer[BUFFER_SIZE]; //buffer to store letters
+    int read_index; //index for reading
+    int write_index; //index for writing
 } shared_memory_t;
 
 
