@@ -64,3 +64,42 @@ void wait_semaphore(int sem_id) {
         perror("semop wait failed");
     }
 }
+
+void signal_semaphore(int sem_id) {
+    struct sembuf sb = { 0, 1, 0 };
+    if (semop(sem_id, &sb, 1) == -1) {
+        perror("semop signal failed");
+    }
+}
+
+char generate_random_letter(void) {
+    return 'A' + (rand() % NUM_LETTERS);
+}
+
+void clear_screen(void) {
+    system("clear");
+}
+
+void display_histogram(int counts[NUM_LETTERS]) {
+    clear_screen();
+    for (int i = 0; i < NUM_LETTERS; i++) {
+        printf("%c-%03d ", 'A' + i, counts[i]);
+
+
+        int count = counts[i];
+        while (count >= 100) {
+            printf("*");
+            count -= 100;
+        }
+        while (count >= 10) {
+            printf("+");
+            count -= 10;
+        }
+        while (count > 0) {
+            printf("-");
+            count--;
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
